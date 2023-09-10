@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/css/car_sell.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/a8ce105ab8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>List your post</title>
+  </head>
+
+  <body class="mainBody">
+    <div class="heroContainer" id="blur">
+      <div>
+        <div class="headerContainer">
+          <h1 class="headerTitle">🚘 List your car</h1>
+          <!-- fontawesome: Home Button -->
+          <a class="homepageLink" href="/homepage"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+          <!-- fontawesome: Logout Button -->
+          <a class="logoutLink" href="/logout"
+            ><i class="fa-solid fa-power-off"></i
+          ></a>
+        </div>
+        <hr class="lineBreak" />
+
+        <div class="tableContainer">
+          <div class="inputContainer">
+            <form action="/sell/create" , method="POST">
+              <input type="hidden" name="user_id" value="{{session.user_id}}" />
+              <div class="inputBox">
+                Price:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="price"
+                  placeholder="Enter dollar amount"
+                />
+              </div>
+              <div class="inputBox">
+                Make:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="make"
+                  placeholder="Enter car make"
+                />
+              </div>
+              <div class="inputBox">
+                Model:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="model"
+                  placeholder="Enter car model"
+                />
+              </div>
+              <div class="inputBox">
+                Year:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="year"
+                  placeholder="Enter car year"
+                />
+              </div>
+              <div class="inputBox">
+                City:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="city"
+                  placeholder="Enter your city"
+                />
+              </div>
+              <div class="inputBox">
+                State:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="state"
+                  placeholder="Enter your state"
+                />
+              </div>
+              <div class="inputBox">
+                Zipcode:
+                <br />
+                <input
+                  class="inputLabel"
+                  name="zipcode"
+                  placeholder="Enter your zipcode"
+                />
+              </div>
+              <div class="inputBox">
+                <label class="inputPhoto" for="photo">Photo(s) Link:</label>
+                <br />
+                <input
+                  class="inputLabel"
+                  name="photoLink"
+                  id="inputText"
+                  placeholder="Enter public photo link"
+                />
+              </div>
+              <div class="inputBox">
+                Description:
+                <br />
+                <textarea
+                  class="inputBox"
+                  name="description"
+                  id=""
+                  cols="30"
+                  rows="2"
+                  placeholder="Enter a description"
+                ></textarea>
+              </div>
+              <div class="postButton">
+                <button>Post</button>
+              </div>
+            </form>
+          </div>
+          <div class="validationMessageContainer">
+            <div class="validationMessage">
+              {% for message in get_flashed_messages() %}
+              <!-- loop through the messages -->
+              <p>{{message}}</p>
+              <!-- display each message in a paragraph tag -->
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup">
+      <h1><i class="fa-regular fa-bell fa-shake"></i></h1>
+      <button class="exit">❌</button>
+      <div class="popupContent">
+        <h4>
+          Ready to post? Simply upload your pictures using a platform like
+          <span class="gd"
+            ><a
+              href="https://www.youtube.com/watch?v=77CmlRucp-Q"
+              target="_blank"
+              >Google Drive</a
+            ></span
+          >
+          and drop the link in the Photo input below for everyone to check your
+          listing!
+        </h4>
+      </div>
+    </div>
+    <!-- Js file -->
+    <script src="{{ url_for('static', filename='/js/car_sell_popup.js') }}"></script>
+  </body>
+</html>

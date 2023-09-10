@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.mainBody{
+    background-color: #9CB3CF;
+    width: 100%;
+    height: 100vh;
+}
+.globalContainer{
+    width: 100%;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+}
+.contentContainer{
+    height: 100vh;
+}
+.credentialsContainer, .contentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credentialsContainer{
+    width: 1000px;
+    height: 620px;
+    background-color: white;
+    box-shadow: 0px 25px 20px -15px #111; 
+}
+.imageContainer{
+    width: 620px;
+    height: 620px;
+    background-color: white;
+    padding-right: 45px;
+}
+.introImage{
+    width: 600px;
+    height: 620px;
+}
+.credentials{
+    width: 380px;
+    height: 440px;
+    background-color: white;
+    margin-left: -17px;
+    margin-top: -150px;
+}
+.sloganContainer{
+    width: 340px;
+    text-align: center;
+}
+.slogan{
+    font-size: 13px;
+    font-weight: 900;
+    color: #169500;
+}
+.loginContainer, .registerContainer{
+    width: 340px;
+}
+.registerContainer{
+    width: 340px;
+    height: 355px;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+.validationError{
+    text-align: center;
+    color: red;
+}
+.loginTitle{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.registerSide{
+    width: 100%;
+}
+.first_name, .last_name, .email, .password, .confirm_password{
+    border: none;
+    border-bottom: 2px solid lightgray;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.registerTitle{
+    margin-bottom: 5px;
+}
+.registerButton, .loginButton{
+    border: 2px solid lightgray;
+    width: 60%;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #176BD9;
+    color: white;
+    transition: box-shadow .3x;
+    margin-top: 5px;
+}
+.registerButton:hover, .loginButton:hover{
+    background-color: #176BD9;
+    box-shadow: 0 0 15px #176BD9; 
+    border: 2px solid #176BD9;
+    cursor: pointer;
+}
+.submitButton{
+    display: flex;
+    justify-content: center;
+}

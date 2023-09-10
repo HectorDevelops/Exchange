@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange 🔁</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/css/homepage.css') }}"
+    />
+  </head>
+  <body class="mainBody">
+    <div class="contentContainer">
+      <div class="globalContainer">
+        <div class="credentialsContainer">
+          <div class="imageContainer">
+            <img
+              class="introImage"
+              src="{{ url_for('static', filename='images/introImage.png') }}"
+              alt="ChevyImage"
+            />
+          </div>
+          <div class="credentials">
+            <div class="sloganContainer">
+              <p class="slogan">
+                Your Road to Car Exchange: Drive, Post, and Buy!
+              </p>
+            </div>
+            <div class="loginContainer">
+              <h1 class="loginTitle">Login to Exchange</h1>
+              <form action="/users/login" method="POST">
+                <div>
+                  <label>Email:</label>
+                  <br />
+                  <input
+                    class="email"
+                    name="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div>
+                  <label>Password:</label>
+                  <br />
+                  <input
+                    class="password"
+                    name="password"
+                    type="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+                <div class="submitButton">
+                  <button class="loginButton">Login</button>
+                </div>
+              </form>
+            </div>
+            <div class="registerSide">
+              <div class="registerContainer">
+                <h1 class="registerTitle">Sign Up</h1>
+                <div class="validationError">
+                  {% for message in get_flashed_messages() %}
+                  <p>{{message}}</p>
+                  {% endfor %}
+                </div>
+                <form action="/users/register" method="POST">
+                  <div>
+                    <label>First Name:</label>
+                    <br />
+                    <input
+                      class="first_name"
+                      name="first_name"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label>Last Name:</label>
+                    <br />
+                    <input
+                      class="last_name"
+                      name="last_name"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                  <div>
+                    <label>Email:</label>
+                    <br />
+                    <input
+                      class="email"
+                      name="email"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div>
+                    <label>Password:</label>
+                    <br />
+                    <input
+                      class="password"
+                      name="password"
+                      type="password"
+                      placeholder="Create password"
+                    />
+                  </div>
+                  <div class="registerSection">
+                    <label>Confirm Password:</label>
+                    <br />
+                    <input
+                      class="confirm_password"
+                      name="confirm_password"
+                      type="password"
+                      placeholder="Confirm password"
+                    />
+                  </div>
+                  <div class="submitButton">
+                    <button class="registerButton">Sign Up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

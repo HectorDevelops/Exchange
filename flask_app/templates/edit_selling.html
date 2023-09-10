@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/css/edit_selling.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/a8ce105ab8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Edit Post</title>
+  </head>
+  <body class="mainBody">
+    <div class="heroContainer">
+      <div class="headerContainer">
+        <h1 class="headerTitle">Edit {{this_deal.make}}</h1>
+        <!-- fontawesome: Home button -->
+        <a class="homepageLink" href="/homepage"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+        <!-- fontawesome: Logout button -->
+        <a class="logoutLink" href="/logout"
+          ><i class="fa-solid fa-power-off"></i
+        ></a>
+      </div>
+
+      <hr class="lineBreak" />
+
+      <div class="tableContainer">
+        <div class="inputContainer">
+          <form action="/new/update" method="POST">
+            <input type="hidden" name="id" value="{{this_deal.id}}" />
+            <div class="inputBox">
+              Price:
+              <br />
+              <input
+                name="price"
+                value="{{this_deal.price}}"
+                placeholder="Enter dollar amount"
+              />
+            </div>
+            <div class="inputBox">
+              Model:
+              <br />
+              <input
+                name="model"
+                value="{{this_deal.model}}"
+                placeholder="Enter car model"
+              />
+            </div>
+            <div class="inputBox">
+              Make:
+              <br />
+              <input
+                name="make"
+                value="{{this_deal.make}}"
+                placeholder="Enter car make"
+              />
+            </div>
+            <div class="inputBox">
+              Year:
+              <br />
+              <input
+                name="year"
+                value="{{this_deal.year}}"
+                placeholder="Enter car year"
+              />
+            </div>
+            <div class="inputBox">
+              City:
+              <br />
+              <input
+                name="city"
+                value="{{this_deal.city}}"
+                placeholder="Enter your city"
+              />
+            </div>
+            <div class="inputBox">
+              State:
+              <br />
+              <input
+                name="state"
+                value="{{this_deal.state}}"
+                placeholder="Enter your state"
+              />
+            </div>
+            <div class="inputBox">
+              Zipcode:
+              <br />
+              <input
+                name="zipcode"
+                value="{{this_deal.zipcode}}"
+                placeholder="Enter your zipcode"
+              />
+            </div>
+            <div class="inputBox">
+              <label class="inputPhoto" for="photo">Photo(s):</label>
+              <br />
+              <input
+                class="photoInput"
+                id="photo"
+                name="photoLink"
+                value="{{this_deal.photoLink}}"
+              />
+            </div>
+            <div class="inputBox">
+              Description:
+              <br />
+              <textarea
+                class="inputBox"
+                name="description"
+                id=""
+                cols="30"
+                rows="2"
+                placeholder="Enter a description"
+              >
+              {{this_deal.description}}</textarea
+              >
+            </div>
+            <div class="updateButton">
+              <button>UPDATE</button>
+            </div>
+          </form>
+        </div>
+        <div class="validationMessageContainer">
+          <div class="validationMessage">
+            {% for message in get_flashed_messages() %}
+            <!-- loop through the messages to display validation errors-->
+            <p>{{message}}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

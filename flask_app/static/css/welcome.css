@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.mainBody, .headerContainer, .contentInfo, .welcomeInput, .popupButtons, #popup, .logOutButton, .addButton, .popupButtons{
+    display: flex;
+}
+.mainBody {
+    background-color: #9CB3CF;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh
+}
+.heroContainer{
+    background-color: #FAFAF5;
+    justify-content: center;
+    width: 700px;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 20px 25px 20px -25px #111; 
+    /* border: 2px solid red; */
+}
+.headerContainer{
+    width: 650px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+.headerContainer > h1{
+    width: 500px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.listingTitle{
+    padding-left: 20px;
+    margin: -5px 0 -5px 0;
+}
+.lineBreak{
+    border: 1px solid rgb(235, 235, 236);
+}
+.contentInfo{
+    padding-left: 20px;
+    justify-content: center;
+}
+.contentTable{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 1px lightgray; 
+    width: 650px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+.tableHeaders{
+    font-size: 20px;
+    font-weight: bold;
+}
+.tableBody{
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+}
+.tableBody{
+    border: 2px solid black;
+}
+.contentData{
+    border: 2px solid black;
+}
+.actions > button > a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.viewButton > a{
+    color: black;
+}
+.actions > button:hover{
+    transform: scale(1.6); 
+    background: none;
+    cursor: pointer;
+}
+.heroContainer#blur.active {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 300px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0, .30);
+    border-radius: 25px;;
+    background-color: #FFFFFF;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 1;
+    transition: 0;
+}
+.popupContainer{
+    text-align: center;
+    border-radius: 25px;
+    padding: 0 0 10px 0;
+    width: 280px;
+    height: 310px;
+}
+.popupButtons {
+    width: 260px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+}
+.popupButtons > .proceed {
+    background-color: #DC3644;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+}
+.popupButtons > .cancel {
+    background-color: #176BD9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+}
+.popupButtons > .cancel:hover{
+    background-color: #176BD9;
+    box-shadow: 0 0 10px #176BD9; 
+    border: 2px solid #176BD9;
+    cursor: pointer;
+}
+.popupButtons > .proceed:hover{
+    background-color: #DC3644;
+    box-shadow: 0 0 10px #DC3644; 
+    border: 2px solid #DC3644;
+    cursor: pointer;
+}
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.05s;
+}
+.deleteIcon{
+    width: 120px;
+    height: 120px;
+    padding: 20px 0 30px;
+}
+.popupButtons{
+    justify-content: space-evenly;
+}
+.logOutButton, .addButton{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #000000; 
+    color: white;
+}
+.logOutButton{
+    background-color: #26282B;
+}
+.addButton{
+    background-color: white;
+    color: black;
+}
+.logOutButton:hover{
+    background-color: #DC3644;
+    box-shadow: 0 0 10px #DC3644; 
+    border: 2px solid #DC3644;
+    cursor: pointer;
+    color: white;
+}
+.addButton:hover{
+    background-color: #176BD9;
+    box-shadow: 0 0 5px #176BD9; 
+    border: 2px solid #176BD9;
+    cursor: pointer;
+    color: white;
+}
+
+.welcomeInput{
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.welcomeInput > h2 {
+    margin-top: 1px;
+}
+#search{
+    height: 25px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid lightgray;
+}
+.contentData{
+    border: 2px solid red;
+}
+.actions > button{
+    border-style: none;
+    background-color: white;
+}
+.deleteButton > a{
+    text-decoration: none;
+}

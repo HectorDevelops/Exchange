@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.mainBody, .headerContainer, .tableContainer, .updateButton, .logoutLink, .homepageLink{
+    display: flex;
+}
+.mainBody {
+    background-color: #9CB3CF;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh
+}
+.heroContainer{
+    background-color: #FAFAF5;
+    width: 700px;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 20px 25px 20px -25px #111; 
+}
+.headerContainer{
+    width: 650px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: -3px 0 -15px 0;
+}
+.logoutLink, .homepageLink{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #000000; 
+    color: white;
+}
+.logoutLink{
+    background-color: #26282B;
+}
+.homepageLink{
+    background-color: white;
+    color: black;
+}
+.homepageLink{
+    margin-left: 195px;;
+}
+.homepageLink:hover{
+    background-color: #176BD9;
+    box-shadow: 0 0 10px #176BD9; 
+    border: 2px solid #176BD9;
+    cursor: pointer;
+    color: white;
+}
+.logoutLink:hover{
+    background-color: #DC3644;
+    box-shadow: 0 0 10px #DC3644; 
+    border: 2px solid #DC3644;
+    cursor: pointer;
+}
+.lineBreak{
+    border: 1px solid rgb(235, 235, 236);
+}
+.tableContainer {
+    margin: 15px 0 0 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 630px;
+    height: 340px;
+    padding: 20px 0 20px 20px;
+}
+.inputBox {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: start;
+}
+.inputBox > input{
+    width: 215px;
+}
+.photoInput {
+    width: 220px;
+    margin-top: 5px;
+}
+.inputBox > input, .inputBox > textarea {
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.updateButton > button{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.updateButton > button:hover{
+    background-color: #29A745;
+    box-shadow: 0 0 10px #29A745; 
+    border: 2px solid #29A745;
+    cursor: pointer;
+}
+.inputContainer{
+    width: 230px;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    height: 340px;
+}
+.headerTitle{
+    width: 310px;
+}
+.validationMessageContainer{
+    width: 370px;
+    height: 340px;
+}
+.validationMessage{
+    text-align: center;
+}
+.updateButton{
+    justify-content: center;
+}

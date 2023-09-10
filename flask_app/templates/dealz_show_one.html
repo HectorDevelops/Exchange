@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/css/show_one.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/a8ce105ab8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>View Post</title>
+  </head>
+  <body class="mainBody">
+    <div class="heroContainer">
+      <div class="header">
+        <div class="headerContainer">
+          <h1 class="headerTitle">📑 Details</h1>
+          <!-- fontawesome: Home Button -->
+          <a class="homepageLink" href="/homepage"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+          <!-- fontawesome: Logout button -->
+          <a class="logoutLink" href="/logout"
+            ><i class="fa-solid fa-power-off"></i
+          ></a>
+        </div>
+      </div>
+      <hr class="lineBreak" />
+
+      <div class="tableContainer">
+        <div class="inputContainer">
+          <div class="dataContainer">
+            <div class="carData">
+              <p>Make: <span class="headers"> {{dealz.make}}</span></p>
+              <p>Model: <span class="headers"> {{dealz.model}}</span></p>
+              <p>Year: <span class="headers"> {{dealz.year}}</span></p>
+              <p>
+                Total cost:
+                <span class="headers"
+                  >{{ "${:,.2f}".format(dealz.price) }}</span
+                >
+              </p>
+              <p>
+                Seller:
+                <span class="headers"
+                  >{{dealz.seller.first_name}} {{dealz.seller.last_name}}</span
+                >
+              </p>
+              <p>
+                Location:
+                <span class="headers"
+                  >{{dealz.city}}, {{dealz.state}}, {{dealz.zipcode}}</span
+                >
+              </p>
+              <p>
+                <span class="headers"
+                  ><button class="btn" onclick="detailsPopup()">
+                    Image(s) + Description
+                  </button></span
+                >
+              </p>
+            </div>
+            <div class="mapContainer">
+              <div class="mapGUI">
+                <div id="map"></div>
+                <!-- Using Google's API to display a map within the View One page while levering the Geo filter to pinpoint zipcode location -->
+                <script>
+                  function initMap() {
+                    var geocoder = new google.maps.Geocoder();
+
+                    geocoder.geocode(
+                      { address: "{{dealz.zipcode}}" },
+                      function (results, status) {
+                        if (status === "OK") {
+                          var map = new google.maps.Map(
+                            document.getElementById("map"),
+                            {
+                              zoom: 12,
+                              center: results[0].geometry.location,
+                            }
+                          );
+                          var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location,
+                          });
+                        } else {
+                          console.error(
+                            "Geocode was not successful for the following reason: " +
+                              status
+                          );
+                        }
+                      }
+                    );
+                  }
+                </script>
+                <script
+                  async
+                  defer
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6zrlyIQaouwrtHqlCUolO1iVhlgpG_cA&callback=initMap&libraries=places"
+                ></script>
+              </div>
+              <div class="popup" id="details">
+                <div class="popupContent">
+                  <div class="container">
+                    <p>
+                      <span class="headers"></span>
+                      <a
+                        href="{{dealz.photoLink}}"
+                        target="_blank"
+                        class="photoButton"
+                        ><button class="photoButton">
+                          Photo(s) Link
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square fa-beat"
+                          ></i></button
+                      ></a>
+                    </p>
+                    <p class="description">Description:</p>
+
+                    <div class="descriptionContent">
+                      <span class="descriptionHeader"
+                        >{{dealz.description}}</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="emailContainer">
+            <div class="contactLink">
+              <a href="mailto: {{user.email}} "> 📧 Email Merchant</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='/js/show_one_popup.js') }}"></script>
+  </body>
+</html>
