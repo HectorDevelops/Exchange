@@ -1,7 +1,5 @@
 <h1 align='center'>Welcome to Exchange</h1>
 
-# Welcome to Exchange 
-
 <img width="1665" alt="Screenshot 2023-09-13 at 1 42 48 PM" src="https://github.com/HectorDevelops/Car_Dealz/assets/55935722/5cd18034-b1c8-4adf-9c07-461e2308a7ed">
 
 
