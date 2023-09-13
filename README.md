@@ -4,21 +4,21 @@ Exchange has been inspired by a personal struggle of mine when having my car bei
 
 
 #Technologies Used 
-⋅⋅* Python 
-⋅⋅* JavaScript
-⋅⋅* HTML 
-⋅⋅* CSS
-⋅⋅* Flask
-⋅⋅* Jinja2
-⋅⋅* MySQL
+* Python 
+* JavaScript
+* HTML 
+* CSS
+* Flask
+* Jinja2
+* MySQL
 
 
 # Getting Started 
 To run the application locally, follow these steps:
 
 1. Clone the repository:
-
 ```
 https://github.com/HectorDevelops/Car_Dealz.git
 ```
+2. Install the necessary dependencies - 
 
