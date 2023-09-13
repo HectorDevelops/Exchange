@@ -1,3 +1,5 @@
+<h1 align='center'>Welcome to Exchange</h1>
+
 # Welcome to Exchange 
 
 Exchange has been inspired by a personal struggle of mine when having my car being stolen and unable to find an vehicle that fit my criteria for nearly two months. This website provides a simple user-friend experience. The application is built using Python, JavaScript, HTML, CSS, Flask and MySQL. 
