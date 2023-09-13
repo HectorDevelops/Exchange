@@ -5,7 +5,7 @@
 
 Exchange has been inspired by a personal struggle of mine when having my car being stolen and unable to find an vehicle that fit my criteria for nearly two months. This website provides a simple user-friend experience. The application is built using Python, JavaScript, HTML, CSS, Flask and MySQL. 
 
-#Technologies Used 
+<h3>Technologies Used </h3>
 * Python 
 * JavaScript
 * HTML 
@@ -15,7 +15,7 @@ Exchange has been inspired by a personal struggle of mine when having my car bei
 * MySQL
 
 
-# Getting Started 
+<h3>Getting Started </h3>
 To run the application locally, follow these steps:
 
 1. Clone the repository:
