@@ -31,5 +31,7 @@ https://github.com/HectorDevelops/Car_Dealz.git
 * pip install pymysql
 
 3. Build and run the application.
-4. Open your web browser and visit http://localhost:5000 to access Exchange locally. 
+4. Open your web browser and visit http://localhost:5000 to access Exchange locally.
+
+Please direct any problems to HectorDevelops@gmail.com
 
