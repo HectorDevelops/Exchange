@@ -22,5 +22,11 @@ To run the application locally, follow these steps:
 ```
 https://github.com/HectorDevelops/Car_Dealz.git
 ```
-2. Install the necessary dependencies - 
+2. Install the following dependencies:
+* pip install flask 
+* pip install flask-bcrypt
+* pip install pymysql
+
+3. Build and run the application.
+4. Open your web browser and visit http://localhost:5000 to access Exchange locally. 
 
