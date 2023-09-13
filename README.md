@@ -14,6 +14,9 @@ Exchange has been inspired by a personal struggle of mine when having my car bei
 * Jinja2
 * MySQL
 
+# Features
+* Login and Registration
+* Basic CRUD operations to allow users Create, Read, Update, and Delete user's/post data. 
 
 # Getting Started 
 To run the application locally, follow these steps:
