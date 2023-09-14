@@ -16,7 +16,9 @@ Exchange was born out of a deeply personal experience, a challenging period in m
 
 # Features
 * Login and Registration
-* Basic CRUD operations to allowing users to Create, Read, Update, and Delete the  data. 
+* Basic CRUD operations to allowing users to Create, Read, Update, and Delete the  data.
+* Google Maps API to display Seller's location based off the post's zipcode.
+* To simplify location access, filter posts by city. 
 
 # Getting Started 
 To run the application locally, follow these steps:
