@@ -5,6 +5,8 @@
 
 Exchange was born out of a deeply personal experience, a challenging period in my life when my car was stolen, and I faced the daunting task of finding a replacement that met my criteria. Frustrated by a nearly two month search, I envisioned a solution that would simplify this process for others. The result is this website, designed to offer a seamless and user-friendly experience, ensuring that no one else has to endure the same struggles I did in finding my perfect vehicle. 
 
+Live Demo: https://youtu.be/d9WD5Huiwvk?si=1od28Uo8fWcWCsrA
+
 # Technologies Used 
 * Python 
 * JavaScript
@@ -34,9 +36,6 @@ https://github.com/HectorDevelops/Car_Dealz.git
 
 3. Build and run the application.
 4. Open your web browser and visit http://localhost:5000 to access Exchange locally.
-
-# Live Demo:
-https://youtu.be/d9WD5Huiwvk?si=1od28Uo8fWcWCsrA
 
 Please direct any problems to HectorDevelops@gmail.com
 
