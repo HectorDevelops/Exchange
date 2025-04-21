@@ -25,17 +25,28 @@ Live Demo: https://youtu.be/d9WD5Huiwvk?si=1od28Uo8fWcWCsrA
 # Getting Started 
 To run the application locally, follow these steps:
 
-1. Clone the repository:
+1. Open terminal / command line 
+2. Clone the repository:
 ```
-https://github.com/HectorDevelops/Car_Dealz.git
+git clone https://github.com/HectorDevelops/Car_Dealz.git
 ```
-2. Install the following dependencies:
-* pip install flask 
-* pip install flask-bcrypt
-* pip install pymysql
+3. Open environment by running the following commands:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+3. Install the following dependencies after env is active:
+```
+pip install flask 
+pip install flask-bcrypt
+pip install pymysql
+```
 
-3. Build and run the application.
-4. Open your web browser and visit http://localhost:5000 to access Exchange locally.
+3. Build and run the application:
+```
+python3 server.py
+```
+5. Open your web browser and visit http://localhost:5000 to access Exchange locally.
 
 Please direct any problems to HectorDevelops@gmail.com
 
